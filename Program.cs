@@ -1,4 +1,5 @@
 ﻿using System;
+using Computers;
 namespace Singleton{
     class Program{
         public static void Main(string[] args)
@@ -15,6 +16,27 @@ namespace Singleton{
 
             //Closing the application 
             instance.log("Application is finally closed !!!!!");
+
+            var gamingComputerFactory=new GamingComputerFactory();
+            var computerBuilder=gamingComputerFactory.createComputerBuilder();
+
+            computerBuilder.setCpu("Intel i10");
+            computerBuilder.setGraphics("NVIDIA RTX 3880");
+            computerBuilder.setStorage("2TB ssd");
+            computerBuilder.setRam("16 GB");
+            var gamingComputer=computerBuilder.Build();
+
+            var laptop=new GamingComputerFactory();
+            var laptopBuilder=laptop.createComputerBuilder();
+            
+            laptopBuilder.setCpu("Intel i10");
+            laptopBuilder.setGraphics("NVIDIA RTX 3880");
+            laptopBuilder.setStorage("2TB ssd");
+            laptopBuilder.setRam("16 GB");
+            var laptopComputer=laptopBuilder.Build();
+
+            Console.WriteLine($"\n\nGaming computer specification:\n CPU:{gamingComputer.Cpu}\n RAM:{gamingComputer.Ram}\n Storage:{gamingComputer.Storage}\n Graphics card: {gamingComputer.GraphicsCard}");
+            Console.WriteLine($"\n\n Laptop's specification:\n CPU:{laptopComputer.Cpu}\n RAM:{laptopComputer.Ram}\n Storage:{laptopComputer.Storage}\n Graphics card: {laptopComputer.GraphicsCard}");
         }
         public static void performTask1()
         {
