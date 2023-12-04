@@ -7,14 +7,14 @@ namespace Singleton{
             Logger instance= Logger.Instance;
 
             //---use logger to log message
-            instance.log("Application started");
+            instance.log("Application is just started");
 
             //--simulate the logging from different parts of the application
             performTask1();
             performTask2();
 
             //Closing the application 
-            instance.log("Application closed");
+            instance.log("Application is finally closed !!!!!");
         }
         public static void performTask1()
         {
