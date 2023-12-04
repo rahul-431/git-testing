@@ -60,7 +60,6 @@ namespace DesignPattern
             {
                 foreach (KeyValuePair<string, string> conf in configurationSetting)
                 {
-                    Console.WriteLine("-------These are the list of all configuration setting------");
                     Console.WriteLine($"{conf.Key}:{conf.Value}");
                 }
             }
