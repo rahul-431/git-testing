@@ -63,7 +63,6 @@ namespace DesignPattern
                     Console.WriteLine($"{conf.Key}:{conf.Value}");
                 }
             }
-
         }
     }
 }
